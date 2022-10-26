@@ -11,6 +11,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.1",
+    "@codemirror/state": "^6.1.2",
+    "@codemirror/view": "^6.4.0",
     "@hongbusi/icons-svg": "^0.0.5",
     "@unocss/reset": "^0.45.22",
     "@vueuse/core": "^9.1.0",
