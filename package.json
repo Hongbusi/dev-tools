@@ -1,0 +1,48 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@hongbusi/icons-svg": "^0.0.5",
+    "@unocss/reset": "^0.45.22",
+    "@vueuse/core": "^9.1.0",
+    "@vueuse/head": "^0.7.12",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.17",
+    "vue": "^3.2.39",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@hongbusi/eslint-config": "^0.3.4",
+    "@iconify/utils": "^2.0.1",
+    "@types/node": "^18.7.18",
+    "@types/nprogress": "^0.2.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "critters": "^0.0.16",
+    "eslint": "^8.23.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "typescript": "^4.8.3",
+    "unocss": "^0.45.8",
+    "unplugin-auto-import": "^0.11.2",
+    "unplugin-vue-components": "^0.22.4",
+    "vite": "^3.0.8",
+    "vite-plugin-pages": "^0.25.0",
+    "vite-plugin-vue-layouts": "^0.7.0",
+    "vite-ssg": "^0.20.2",
+    "vue-tsc": "^0.40.1"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,ts,tsx,json,md}": "eslint --fix"
+  }
+}
