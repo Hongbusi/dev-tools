@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-full">
     <div class="flex-1 flex justify-center items-center">
-      <div class="p-4 mx-auto w-full max-w-4xl bg-green">
+      <div class="p-4 mx-auto w-full max-w-4xl bg-gradient-to-r from-violet-500 to-fuchsia-500">
         <div class="relative p-4 bg-black/75 rounded-3">
           <div>
             <div class="flex space-x-2">
