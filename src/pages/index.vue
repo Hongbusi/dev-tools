@@ -5,13 +5,22 @@ useHead({
     { name: 'description', content: 'Create beautiful images of your code.' }
   ]
 })
+
+const colorOptions = [
+  { key: 1, value: 'bg-gradient-to-r from-cyan-500 to-blue-500', label: 'Cyan' },
+  { key: 2, value: 'bg-gradient-to-r from-sky-500 to-indigo-500', label: 'Sky' },
+  { key: 3, value: 'bg-gradient-to-r from-violet-500 to-fuchsia-500', label: 'VIolet' },
+  { key: 4, value: 'bg-gradient-to-r from-purple-500 to-pink-500', label: 'Purple' }
+]
+
+const color = ref(colorOptions[0].value)
 </script>
 
 <template>
   <div class="relative flex flex-col h-full">
     <h1 class="absolute top-25 right-0 left-0 text-4xl text-center text-rose-400" />
     <div class="flex-1 flex justify-center items-center">
-      <div class="p-4 mx-auto w-full max-w-4xl bg-gradient-to-r from-violet-500 to-fuchsia-500">
+      <div class="p-4 mx-auto w-full max-w-4xl" :class="color">
         <div class="relative p-4 bg-black/75 rounded-3">
           <div>
             <div class="flex space-x-2">
@@ -31,6 +40,23 @@ useHead({
       <div>
         <div>
           Colors
+        </div>
+        <div class="relative">
+          <div class="px-2 py-1 cursor-pointer border border-white/10 rounded">
+            <div class="w-4 h-4 rounded-full" :class="color" />
+          </div>
+          <div class="absolute left-0 bottom-full p-2 mb-1 text-sm text-white/40 bg-#191919 border border-white/10 rounded space-y-1">
+            <div
+              v-for="item in colorOptions"
+              :key="item.key"
+              class="flex items-center p-1 cursor-pointer rounded space-x-2"
+              :class="item.value === color ? 'bg-white/10 text-white/90' : ''"
+              @click="color = item.value"
+            >
+              <span class="inline-block w-4 h-4 rounded-full" :class="item.value" />
+              <span>{{ item.label }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
