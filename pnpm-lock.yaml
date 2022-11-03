@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@codemirror/lang-javascript': ^6.1.1
+  '@codemirror/language': ^6.3.0
   '@codemirror/state': ^6.1.2
-  '@codemirror/view': ^6.4.0
   '@commitlint/cli': ^17.1.2
   '@commitlint/config-conventional': ^17.1.0
   '@hongbusi/eslint-config': ^0.3.4
@@ -15,6 +15,7 @@ specifiers:
   '@vitejs/plugin-vue': ^3.0.3
   '@vueuse/core': ^9.1.0
   '@vueuse/head': ^0.7.12
+  codemirror: ^6.0.1
   critters: ^0.0.16
   eslint: ^8.23.1
   husky: ^8.0.1
@@ -35,12 +36,13 @@ specifiers:
 
 dependencies:
   '@codemirror/lang-javascript': 6.1.1
+  '@codemirror/language': 6.3.0
   '@codemirror/state': 6.1.2
-  '@codemirror/view': 6.4.0
   '@hongbusi/icons-svg': 0.0.5
   '@unocss/reset': 0.45.22
   '@vueuse/core': 9.1.0_vue@3.2.39
   '@vueuse/head': 0.7.12_vue@3.2.39
+  codemirror: 6.0.1
   nprogress: 0.2.0
   pinia: 2.0.17_arz4dztosvwy2ghjrlh2wdhejm
   vue: 3.2.39
@@ -137,6 +139,15 @@ packages:
       '@lezer/common': 1.0.1
     dev: false
 
+  /@codemirror/commands/6.1.2:
+    resolution: {integrity: sha512-sO3jdX1s0pam6lIdeSJLMN3DQ6mPEbM4yLvyKkdqtmd/UDwhXA5+AwFJ89rRXm6vTeOXBsE5cAmlos/t7MJdgg==}
+    dependencies:
+      '@codemirror/language': 6.3.0
+      '@codemirror/state': 6.1.2
+      '@codemirror/view': 6.4.0
+      '@lezer/common': 1.0.1
+    dev: false
+
   /@codemirror/lang-javascript/6.1.1:
     resolution: {integrity: sha512-F4+kiuC5d5dUSJmff96tJQwpEXs/tX/4bapMRnZWW6bHKK1Fx6MunTzopkCUWRa9bF87GPmb9m7Qtg7Yv8f3uQ==}
     dependencies:
@@ -162,6 +173,14 @@ packages:
 
   /@codemirror/lint/6.0.0:
     resolution: {integrity: sha512-nUUXcJW1Xp54kNs+a1ToPLK8MadO0rMTnJB8Zk4Z8gBdrN0kqV7uvUraU/T2yqg+grDNR38Vmy/MrhQN/RgwiA==}
+    dependencies:
+      '@codemirror/state': 6.1.2
+      '@codemirror/view': 6.4.0
+      crelt: 1.0.5
+    dev: false
+
+  /@codemirror/search/6.2.2:
+    resolution: {integrity: sha512-2pWY599zXk+lSoJ2iv9EuTO4gB7lhgBPLPwFb/zTbimFH4NmZSaKzJSV51okjABZ7/Rj0DYy5klWbIgaJh2LoQ==}
     dependencies:
       '@codemirror/state': 6.1.2
       '@codemirror/view': 6.4.0
@@ -1532,6 +1551,18 @@ packages:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
     dev: true
+
+  /codemirror/6.0.1:
+    resolution: {integrity: sha512-J8j+nZ+CdWmIeFIGXEFbFPtpiYacFMDR8GlHK3IyHQJMCaVRfGx9NT+Hxivv1ckLWPvNdZqndbr/7lVhrf/Svg==}
+    dependencies:
+      '@codemirror/autocomplete': 6.3.0
+      '@codemirror/commands': 6.1.2
+      '@codemirror/language': 6.3.0
+      '@codemirror/lint': 6.0.0
+      '@codemirror/search': 6.2.2
+      '@codemirror/state': 6.1.2
+      '@codemirror/view': 6.4.0
+    dev: false
 
   /color-convert/1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}

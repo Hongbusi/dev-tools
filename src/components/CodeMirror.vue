@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { EditorView } from 'codemirror'
 import { Compartment, EditorState } from '@codemirror/state'
-import { EditorView } from '@codemirror/view'
+import { defaultHighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { javascript } from '@codemirror/lang-javascript'
 
 const el = ref<HTMLDivElement>()
@@ -24,19 +25,21 @@ const baseTheme = EditorView.baseTheme({
   }
 })
 
-const language = new Compartment(); const tabSize = new Compartment()
+// eslint-disable-next-line new-parens
+const language = new Compartment
 
 const state = EditorState.create({
   doc: defaultCode,
   extensions: [
     baseTheme,
-    language.of(javascript()),
-    tabSize.of(EditorState.tabSize.of(8))
+    syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+    language.of(javascript())
   ]
 })
 
 onMounted(() => {
-  const editor = new EditorView({
+  // eslint-disable-next-line no-new
+  new EditorView({
     state,
     parent: el.value!
   })
