@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { EditorView } from 'codemirror'
 import { Compartment, EditorState } from '@codemirror/state'
+import { oneDark } from '@codemirror/theme-one-dark'
 import { defaultHighlightStyle, syntaxHighlighting } from '@codemirror/language'
 import { javascript } from '@codemirror/lang-javascript'
 
@@ -18,10 +19,8 @@ createApp({
 
 const baseTheme = EditorView.baseTheme({
   '&': {
-    outline: 'none !important'
-  },
-  '.cm-content': {
-    caretColor: 'white'
+    outline: 'none !important',
+    background: 'transparent !important'
   }
 })
 
@@ -31,6 +30,7 @@ const language = new Compartment
 const state = EditorState.create({
   doc: defaultCode,
   extensions: [
+    oneDark,
     baseTheme,
     syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
     language.of(javascript())
