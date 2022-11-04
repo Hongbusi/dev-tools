@@ -18,24 +18,14 @@ const color = ref(colorOptions[0].value)
 
 <template>
   <div class="relative flex flex-col h-full">
-    <h1 class="absolute top-25 right-0 left-0 text-4xl text-center text-rose-400" />
     <div class="flex-1 flex justify-center items-center">
       <div class="p-4 mx-auto w-full max-w-4xl" :class="color">
-        <div class="relative p-4 bg-black/75 rounded-3">
-          <div>
-            <div class="flex space-x-2">
-              <div class="w-3 h-3 bg-red rounded-full" />
-              <div class="w-3 h-3 bg-white/20 rounded-full" />
-              <div class="w-3 h-3 bg-green rounded-full" />
-            </div>
-          </div>
-
-          <div class="py-5">
-            <CodeMirror />
-          </div>
-        </div>
+        <MacFrame>
+          <CodeMirror />
+        </MacFrame>
       </div>
     </div>
+
     <div class="fixed bottom-30 left-50% -translate-50% p-4 border border-white/20 rounded-2 bg-#191919 shadow">
       <div>
         <div>
