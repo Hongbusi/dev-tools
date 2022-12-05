@@ -19,10 +19,16 @@ const color = ref(colorOptions[0].value)
 <template>
   <div class="relative flex flex-col h-full">
     <div class="flex-1 flex justify-center items-center">
-      <div class="p-4 mx-auto w-full max-w-4xl" :class="color">
+      <div class="relative p-4 mx-auto w-full max-w-4xl" :class="color">
         <MacFrame>
           <CodeMirror />
         </MacFrame>
+        <div class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-5 h-5 cursor-ew-resize group">
+          <div class="w-2 h-2 bg-white rounded-full transition-all group-hover:scale-200" />
+        </div>
+        <div class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-5 h-5 cursor-ew-resize group">
+          <div class="w-2 h-2 bg-white rounded-full transition-all group-hover:scale-200" />
+        </div>
       </div>
     </div>
 
