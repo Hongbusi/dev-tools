@@ -7,10 +7,12 @@ import {
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
+import { presetHbs } from 'unocss-preset-hbs'
 
 export default defineConfig({
   presets: [
     presetUno(),
+    presetHbs(),
     presetIcons({
       extraProperties: {
         'display': 'inline-block',

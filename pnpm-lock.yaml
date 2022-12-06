@@ -25,6 +25,7 @@ specifiers:
   pinia: ^2.0.17
   typescript: ^4.8.3
   unocss: ^0.47.5
+  unocss-preset-hbs: ^0.0.2
   unplugin-auto-import: ^0.11.2
   unplugin-vue-components: ^0.22.4
   unstyled-design: 0.0.2-beta.5
@@ -66,6 +67,7 @@ devDependencies:
   lint-staged: 13.0.3
   typescript: 4.8.3
   unocss: 0.47.5_vite@3.0.8
+  unocss-preset-hbs: 0.0.2
   unplugin-auto-import: 0.11.2_obmlko6hceoahr6itoucrugfeu
   unplugin-vue-components: 0.22.4_vite@3.0.8+vue@3.2.39
   vite: 3.0.8
@@ -4964,6 +4966,10 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
+    dev: true
+
+  /unocss-preset-hbs/0.0.2:
+    resolution: {integrity: sha512-kf48Wy1JNHww3WTX18BY/Dfk2Yn0OW6XPcFL7mqodCwOZYsFgvGtmpVdVYWn1L/SvRRCru7ISFSgN1dWAsZeiQ==}
     dev: true
 
   /unocss/0.47.5_vite@3.0.8:

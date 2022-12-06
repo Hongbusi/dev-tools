@@ -21,19 +21,15 @@ const { width } = useElementSize(el)
 
 <template>
   <div class="relative flex flex-col h-full">
-    <div class="flex-1 flex justify-center items-center">
+    <div class="flex-1 flex-center">
       <div ref="el" class="relative p-4 mx-auto w-full max-w-4xl" :class="color">
         <MacFrame>
           <CodeMirror />
         </MacFrame>
-        <div class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-5 h-5 cursor-ew-resize group">
-          <div class="w-2 h-2 bg-white rounded-full transition-all group-hover:scale-200" />
-        </div>
-        <div class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-5 h-5 cursor-ew-resize group">
-          <div class="w-2 h-2 bg-white rounded-full transition-all group-hover:scale-200" />
-        </div>
-        <div class="absolute right-0 -bottom-4 left-0 h-1px bg-gray/50 before:(content-empty absolute top-1/2 left-0 -translate-y-1/2 w-1px h-4 bg-gray) after:(content-empty absolute top-1/2 right-0 -translate-y-1/2 w-1px h-4 bg-gray)">
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2 py-0.5 text-xs bg-gray-500 text-white/60">
+        <div class="absolute-y-center left-0 -translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
+        <div class="absolute-y-center right-0 translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
+        <div class="absolute right-0 -bottom-4 left-0 h-1px bg-gray/50 before:(content-empty absolute-y-center left-0 w-1px h-4 bg-gray) after:(content-empty absolute-y-center right-0 w-1px h-4 bg-gray)">
+          <div class="absolute-center px-2 py-0.5 text-xs bg-gray-500 text-white/60">
             {{ width }}px
           </div>
         </div>
