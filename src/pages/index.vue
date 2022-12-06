@@ -62,3 +62,8 @@ const color = ref(colorOptions[0].value)
     </div>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  dark: true
+</route>
