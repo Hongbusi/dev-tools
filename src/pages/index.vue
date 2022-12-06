@@ -14,12 +14,15 @@ const colorOptions = [
 ]
 
 const color = ref(colorOptions[0].value)
+
+const el = ref(null)
+const { width } = useElementSize(el)
 </script>
 
 <template>
   <div class="relative flex flex-col h-full">
     <div class="flex-1 flex justify-center items-center">
-      <div class="relative p-4 mx-auto w-full max-w-4xl" :class="color">
+      <div ref="el" class="relative p-4 mx-auto w-full max-w-4xl" :class="color">
         <MacFrame>
           <CodeMirror />
         </MacFrame>
@@ -28,6 +31,11 @@ const color = ref(colorOptions[0].value)
         </div>
         <div class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-5 h-5 cursor-ew-resize group">
           <div class="w-2 h-2 bg-white rounded-full transition-all group-hover:scale-200" />
+        </div>
+        <div class="absolute right-0 -bottom-4 left-0 h-1px bg-gray/50 before:(content-empty absolute top-1/2 left-0 -translate-y-1/2 w-1px h-4 bg-gray) after:(content-empty absolute top-1/2 right-0 -translate-y-1/2 w-1px h-4 bg-gray)">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2 py-0.5 text-xs bg-gray-500 text-white/60">
+            {{ width }}px
+          </div>
         </div>
       </div>
     </div>
@@ -58,7 +66,7 @@ const color = ref(colorOptions[0].value)
     </div>
 
     <div class="pt-20 pb-6 text-center opacity-60">
-      Copyright © 2022-present Hongbusi, design by <a href="https://ray.so/">ray.so</a>.
+      Copyright © 2022-present Hongbusi, design by <a href="https://ray.so">ray.so</a>.
     </div>
   </div>
 </template>
