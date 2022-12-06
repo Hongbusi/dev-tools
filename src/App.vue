@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-  title: 'Tools',
+  title: 'dev-tools',
   meta: [
-    { name: 'description', content: 'A template to quickly create a vue project.' }
+    { name: 'description', content: 'dev tools.' }
   ]
 })
 </script>
