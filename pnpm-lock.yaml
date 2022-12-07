@@ -29,7 +29,7 @@ specifiers:
   unocss-preset-hbs: ^0.0.3
   unplugin-auto-import: ^0.11.2
   unplugin-vue-components: ^0.22.4
-  unstyled-design: 0.0.2-beta.5
+  unstyled-design: 0.0.2-beta.6
   vite: ^3.0.8
   vite-plugin-pages: ^0.25.0
   vite-plugin-vue-layouts: ^0.7.0
@@ -51,7 +51,7 @@ dependencies:
   html2canvas: 1.4.1
   nprogress: 0.2.0
   pinia: 2.0.17_arz4dztosvwy2ghjrlh2wdhejm
-  unstyled-design: 0.0.2-beta.5
+  unstyled-design: 0.0.2-beta.6
   vue: 3.2.39
   vue-router: 4.1.5_vue@3.2.39
 
@@ -1048,8 +1048,8 @@ packages:
       - rollup
     dev: true
 
-  /@unstyled-design/preset-uno/0.0.2-beta.5:
-    resolution: {integrity: sha512-FNQPCKI/498H3AV6nmjj1Bk+25HzxEgIXhMbHZkjs6RSe4RHXa0z+ruN3L4F0xJSqMDWMCbcm/jgUtPZlDd65w==}
+  /@unstyled-design/preset-uno/0.0.2-beta.6:
+    resolution: {integrity: sha512-qG5wu9W1hw7gsJUC9gl/6Lr+4JdXXr8WhMqahNSomnpdku+JUm3hur49qHnGmn5KMtN4KjnZ+R0vzaJ8kamtiQ==}
     dev: false
 
   /@vitejs/plugin-vue/3.0.3_vite@3.0.8+vue@3.2.39:
@@ -5107,10 +5107,10 @@ packages:
       webpack-virtual-modules: 0.4.4
     dev: true
 
-  /unstyled-design/0.0.2-beta.5:
-    resolution: {integrity: sha512-ZN5XuttqbKHA7+1plRB1mmcwKzI4Ys5c+P2jqm42NfYV47HYqFHTcSuc0nq8br5ttUmRnwQZ0ryx+200O14OwA==}
+  /unstyled-design/0.0.2-beta.6:
+    resolution: {integrity: sha512-NbUb5mT/funU+ayhO0skjvNfpFarlonJQK2F4yd/A0ZktAJAbwt4v6EmNBXJ3j9uw/nMsfqCPwP54J9szjGWgw==}
     dependencies:
-      '@unstyled-design/preset-uno': 0.0.2-beta.5
+      '@unstyled-design/preset-uno': 0.0.2-beta.6
     dev: false
 
   /upper-case/1.1.3:
