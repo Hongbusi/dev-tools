@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-  title: 'dev-tools',
+  title: 'DevTools',
   meta: [
-    { name: 'description', content: 'dev tools.' }
+    { name: 'description', content: 'A collection of development tools.' }
   ]
 })
 </script>
