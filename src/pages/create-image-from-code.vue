@@ -17,9 +17,10 @@ const colorOptions = [
 
 const color = ref(colorOptions[0].value)
 
-const el = ref(null)
-const { width } = useElementSize(el)
+const wrapperEl = ref(null)
+const { width } = useElementSize(wrapperEl)
 
+const el = ref(null)
 const handleClickCopyImage = async () => {
   const canvas = await html2canvas(el.value!, { scale: 1.2 })
   canvas.toBlob(async (blob) => {
@@ -34,11 +35,11 @@ const handleClickCopyImage = async () => {
 <template>
   <div class="flex flex-col h-full">
     <div class="flex-1 flex-center">
-      <div ref="el" class="relative">
+      <div ref="wrapperEl" class="relative">
         <div v-resize class="absolute-y-center left-0 -translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
         <div class="absolute-y-center right-0 translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
 
-        <div class="p-4" :class="color">
+        <div ref="el" class="p-4" :class="color">
           <MacFrame>
             <CodeMirror />
           </MacFrame>

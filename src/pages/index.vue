@@ -12,9 +12,9 @@ useHead({
     <Header />
 
     <u-space direction="vertical" class="mt-10">
-      <router-link to="/create-image-for-code">
+      <router-link to="/create-image-from-code">
         <div class="border border-gray/50 px-4 py-2">
-          Create Image For Code
+          Create Image From Code
         </div>
       </router-link>
     </u-space>
