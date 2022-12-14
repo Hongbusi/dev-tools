@@ -59,7 +59,7 @@ export function useResize(target: RefEl, handles: RefEl, options: UseResizeOptio
       maxHeight = Infinity
     } = options
 
-    const width = Math.min(maxWidth, Math.max(minWidth, targetRect.width + startX - currentX))
+    const width = (Math.min(maxWidth, Math.max(minWidth, Math.floor(targetRect.width + startX - currentX))))
     target.value!.style.width = `${width}px`
   }
 
