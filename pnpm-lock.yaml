@@ -9,6 +9,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.1.0
   '@hongbusi/eslint-config': ^0.3.4
   '@hongbusi/icons-svg': ^0.0.5
+  '@hongbusi/utils': 0.0.1-beta.2
   '@iconify/utils': ^2.0.1
   '@types/node': ^18.7.18
   '@types/nprogress': ^0.2.0
@@ -44,6 +45,7 @@ dependencies:
   '@codemirror/state': 6.1.2
   '@codemirror/theme-one-dark': 6.1.0
   '@hongbusi/icons-svg': 0.0.5
+  '@hongbusi/utils': 0.0.1-beta.2
   '@unocss/reset': 0.45.22
   '@vueuse/core': 9.1.0_vue@3.2.39
   '@vueuse/head': 0.7.12_vue@3.2.39
@@ -517,6 +519,10 @@ packages:
 
   /@hongbusi/icons-svg/0.0.5:
     resolution: {integrity: sha512-6G30xsbRJz4a+KaGo7Dm3tZWmk7KnIE2/Q/0Ngt4XKdUozYfrcPxNsKa/lbbtnvJ4Vm54yToDpLbyjfvwg+9QA==}
+    dev: false
+
+  /@hongbusi/utils/0.0.1-beta.2:
+    resolution: {integrity: sha512-a7tHkeFCSrA2PiZsZ8HCMT/m1+XtqP9WKlVsghc4zMXi1bwNjkP84o6xKKhz+JuG12xQq9eOp6zeRMgvh7OgRA==}
     dev: false
 
   /@humanwhocodes/config-array/0.10.4:
