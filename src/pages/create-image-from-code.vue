@@ -10,10 +10,10 @@ useHead({
 })
 
 const colorOptions = [
-  { key: 1, value: 'bg-gradient-to-r from-cyan-500 to-blue-500', label: 'Cyan' },
-  { key: 2, value: 'bg-gradient-to-r from-sky-500 to-indigo-500', label: 'Sky' },
-  { key: 3, value: 'bg-gradient-to-r from-violet-500 to-fuchsia-500', label: 'VIolet' },
-  { key: 4, value: 'bg-gradient-to-r from-purple-500 to-pink-500', label: 'Purple' }
+  { value: 'bg-gradient-to-r from-cyan-500 to-blue-500', label: 'Cyan' },
+  { value: 'bg-gradient-to-r from-sky-500 to-indigo-500', label: 'Sky' },
+  { value: 'bg-gradient-to-r from-violet-500 to-fuchsia-500', label: 'VIolet' },
+  { value: 'bg-gradient-to-r from-purple-500 to-pink-500', label: 'Purple' }
 ]
 
 const color = ref(colorOptions[0].value)
@@ -59,28 +59,7 @@ useResize(wrapperEl, handle, { minWidth: 520, maxWidth: 960 })
 
     <div class="fixed-x-center bottom-30 p-4 border border-white/20 rounded-2 bg-#191919 shadow">
       <u-space>
-        <!-- <div>
-          <div>
-            Colors
-          </div>
-          <div class="relative">
-            <div class="px-2 py-1 cursor-pointer border border-white/10 rounded">
-              <div class="w-4 h-4 rounded-full" :class="color" />
-            </div>
-            <div class="absolute left-0 bottom-full p-2 mb-1 text-sm text-white/40 bg-#191919 border border-white/10 rounded space-y-1">
-              <div
-                v-for="item in colorOptions"
-                :key="item.key"
-                class="flex items-center p-1 cursor-pointer rounded space-x-2"
-                :class="item.value === color ? 'bg-white/10 text-white/90' : ''"
-                @click="color = item.value"
-              >
-                <span class="inline-block w-4 h-4 rounded-full" :class="item.value" />
-                <span>{{ item.label }}</span>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        <u-select v-model="color" :options="colorOptions" />
 
         <u-button @click="handleClickCopyImage">
           Copy Image
