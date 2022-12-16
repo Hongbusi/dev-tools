@@ -1,7 +1,7 @@
 import type { App } from 'vue'
-import setupResizeDirective from './resize'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function setupDirectives(app: App) {
-  setupResizeDirective(app)
+  // TODO thing
 }
 
