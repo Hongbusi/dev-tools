@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import html2canvas from 'html2canvas'
-import { useResize } from '~/composables/useResize'
+import { useClipboardImage, useResize } from '~/composables'
 
 useHead({
   title: 'Create beautiful images of your code',
@@ -17,23 +16,15 @@ const colorOptions = [
 ]
 
 const color = ref(colorOptions[0].value)
-const el = ref(null)
-
-const handleClickCopyImage = async () => {
-  const canvas = await html2canvas(el.value!, { scale: 1.2 })
-  canvas.toBlob(async (blob) => {
-    if (!blob)
-      return
-    const data = [new ClipboardItem({ [blob.type]: blob })]
-    navigator.clipboard.write(data)
-  })
-}
 
 const wrapperEl = ref(null)
 const handle = ref()
-
 const { width } = useElementSize(wrapperEl)
 useResize(wrapperEl, handle, { minWidth: 520, maxWidth: 960 })
+
+// copy image
+const el = ref(null)
+const { copy } = useClipboardImage(el)
 </script>
 
 <template>
@@ -61,7 +52,7 @@ useResize(wrapperEl, handle, { minWidth: 520, maxWidth: 960 })
       <u-space>
         <u-select v-model="color" :options="colorOptions" />
 
-        <u-button @click="handleClickCopyImage">
+        <u-button @click="copy">
           Copy Image
         </u-button>
       </u-space>
