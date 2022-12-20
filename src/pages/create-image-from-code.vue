@@ -18,9 +18,8 @@ const colorOptions = [
 const color = ref(colorOptions[0].value)
 
 const wrapperEl = ref(null)
-const handle = ref()
 const { width } = useElementSize(wrapperEl)
-useResize(wrapperEl, handle, { minWidth: 520, maxWidth: 960 })
+useResize(wrapperEl, { minWidth: 520, maxWidth: 960 })
 
 // copy image
 const el = ref(null)
@@ -31,8 +30,8 @@ const { copy } = useClipboardImage(el)
   <div class="flex flex-col h-full">
     <div class="flex-1 flex-center">
       <div ref="wrapperEl" class="relative w-520px">
-        <div ref="handle" class="absolute-y-center left-0 -translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
-        <div class="absolute-y-center right-0 translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
+        <div class="handle absolute-y-center left-0 -translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
+        <div class="handle absolute-y-center right-0 translate-x-1/2 flex-center w-5 h-5 cursor-ew-resize after:(content-empty w-2 h-2 bg-white rounded-full transition-all) hover:after:scale-200" />
 
         <div ref="el" class="p-4" :class="color">
           <MacFrame>

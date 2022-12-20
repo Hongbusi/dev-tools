@@ -2,6 +2,7 @@
 import type { Ref } from 'vue'
 
 export interface UseResizeOptions {
+  handle?: string
   minWidth?: number
   maxWidth?: number
   minHeight?: number
@@ -11,15 +12,29 @@ export interface UseResizeOptions {
 
 type RefEl = Ref<HTMLElement | null>
 
-export function useResize(target: RefEl, handles: RefEl, options: UseResizeOptions = {}) {
+export function useResize(target: RefEl, options: UseResizeOptions = {}) {
   const isActive = ref(false)
   const pointer = reactive({ startX: 0, startY: 0, currentX: 0, currentY: 0 })
   const targetRect = reactive({ width: 0, height: 0 })
+  let handles: any = null
+
+  onMounted(() => {
+    handles = document.querySelectorAll(options.handle ?? '.handle')
+  })
 
   watch(pointer, handlePointer)
 
+  function isTargetEl(nodeList: NodeList, target: HTMLElement) {
+    let result = false
+    nodeList.forEach((node) => {
+      if (node === target)
+        result = true
+    })
+    return result
+  }
+
   function onPointerDown(event: PointerEvent) {
-    if (!target.value || event.target !== handles.value)
+    if (!target.value || (handles && !isTargetEl(handles, event.target as HTMLElement)))
       return
 
     const { x, y } = event
